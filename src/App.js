@@ -3,7 +3,7 @@ import { Typography } from "@material-ui/core";
 function App() {
   return (
     <>
-      <Typography variant="h2" component="h2">Welcome to DevBook!!!</Typography>
+      <Typography variant="h2" component="h2" data-test="heading">DevBook!</Typography>
     </>
   );
 }
