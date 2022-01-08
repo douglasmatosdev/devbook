@@ -1,28 +1,13 @@
 import { Typography } from "@material-ui/core";
-import { useEffect, useState } from "react";
-import { BookList } from "./components/BookList";
-import { api } from "./services/api";
+import { BookListContainer } from "./components/BookListContainer";
 
-function App() {
-  const [books, setBooks] = useState([])
-
-  useEffect(() => {
-    const fetchBooks = async () => {
-      const response = await api.get('books')
-      setBooks(response.data)
-    }
-
-    fetchBooks()
-  }, [])
-
+export default function App() {
   return (
     <>
       <Typography variant="h2" component="h2" data-test="heading">
         DevBook!
       </Typography>
-      <BookList books={books} />
+      <BookListContainer />
     </>
   );
 }
-
-export default App;
